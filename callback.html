@@ -19,7 +19,11 @@
 const query = new URLSearchParams(location.search);
 const error = query.get("error");
 const message = document.getElementById("message");
-if (error) {
+// A login started from the Brief.il posting console returns to it.
+if ((query.get("state") || "").startsWith("console-")) {
+  message.textContent = "חוזרים ל-Brief.il…";
+  location.replace("http://127.0.0.1:5178/callback" + location.search);
+} else if (error) {
   document.getElementById("heading").textContent = "החיבור נכשל";
   message.className = "error";
   message.textContent = error + (query.get("error_description") ? ": " + query.get("error_description") : "");
