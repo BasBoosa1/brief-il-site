@@ -13,3 +13,16 @@ h2 { font-size: 19px; margin-top: 28px; }
 code, .url { direction: ltr; display: block; overflow-wrap: anywhere; background: #f1f5f9; border-radius: 8px; padding: 12px; font-family: ui-monospace, Consolas, monospace; font-size: 14px; }
 button { margin-top: 12px; padding: 10px 18px; border: 0; border-radius: 8px; background: var(--accent); color: #fff; font: inherit; cursor: pointer; }
 .error { color: #b91c1c; }
+.brand { display: inline-flex; align-items: center; gap: 10px; }
+.brand img { border-radius: 50%; }
+nav { flex-wrap: wrap; }
+.hero { display: flex; gap: 20px; align-items: center; margin: 8px 0 12px; }
+.hero img { border-radius: 50%; flex: none; }
+.hero h1 { margin: 0 0 6px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.card { border: 1px solid var(--line); border-radius: 12px; padding: 4px 16px; }
+.card h3 { font-size: 17px; margin-bottom: 0; }
+.links { display: flex; gap: 20px; list-style: none; padding: 0; }
+.links a { color: var(--accent); font-weight: 700; }
+footer { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 12px; color: var(--muted); font-size: 14px; }
+@media (max-width: 520px) { .hero { flex-direction: column; text-align: center; } .hero img { width: 88px; height: 88px; } }
